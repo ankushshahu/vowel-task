@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.header-container {
+  width: 100vw;
+  /* height: 100vh; */
+  background-image: url('./assets/header/background-image.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  overflow-x: hidden;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+.navbar-links {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+.navbar-links div {
+  cursor: pointer;
+}
+
+.cv-button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.intro-container {
+  display: flex;
+  margin-top: 15vh;
+  margin-left: 20vh;
+  height: 600px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.intro-text-container {
+  width: 39.2rem;
+}
+.intro-text {
+  .intro-greet {
+    font-weight: 800;
+    font-size: 65px;
+  }
+  .intro-name {
+    color: #feb425;
+    font-weight: 800;
+    font-size: 90px;
+  }
+}
+
+.intro-buttons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin: 30px 0;
+
+  .intro-btn {
+    width: 215px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    background: #fef4de;
+    justify-content: center;
+    border-radius: 50px;
+    font-weight: 800;
+    color: #feb425;
+  }
+
+  .intro-line {
+    width: 110px;
+    height: 2px;
+    background: #ffb529;
+    border-radius: 2px;
+  }
+
+  .intro-hire {
+    color: #ff8c00;
+    font-weight: 700;
+  }
+}
+
+.intro-breif {
+  color: #6c6b86;
+}
+
+.social-container {
+  align-self: flex-end;
+}
+
+.navbar-toggler {
+  display: none;
+}
+
+@media (max-width: 1400px) {
+  .intro-container {
+    margin-left: 100px;
+    height: 550px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    background-color: rgb(255 133 77);
+    width: 100%;
+    padding: 1rem;
+    top: 60px;
+  }
+
+  .navbar-container.open span {
+    visibility: hidden;
+  }
+
+  .navbar-container.open span::after {
+    content: '⚟';
+    visibility: visible;
+  }
+
+  .navbar-toggler {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: xx-large;
+  }
+
+  .navbar-container.open .navbar-links {
+    display: flex;
+    height: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    margin-left: 60px;
+    width: 110vh;
+  }
+}
